@@ -1,0 +1,253 @@
+:root{
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --blanco: #ffffff;
+    --negro: #000000;
+    --colorPrimario: #784d3c;
+    --gris:#e1e1e1;
+}
+html{
+    box-sizing:border-box;
+    font-size:62.5%;
+}
+*, *:before, *:after{
+    box-sizing:inherit;
+
+}
+body{
+    font-family:var(--fuenteParrafos);
+    font-size:1.6rem;
+    line-height:2;
+}
+.contenedor{
+    max-width:100rem;
+    width:90%;
+    margin:0 auto;
+}
+a{
+    text-decoration:none;
+}
+h1, h2, h3, h4{
+    font-family:var(--fuenteHeading);
+    line-height:1.2;
+}
+h1{
+    font-size:4.8rem;
+}
+h2{
+    font-size:4rem;
+}
+h3{
+    font-size:3.2rem;
+}
+h4{
+    font-size:2.8rem;
+}
+img{
+    max-width:100%;
+}
+.no-margin{
+    margin:0;
+}
+.no-padding{
+    padding:0;
+}
+.centrarTexto{
+    text-align:center;
+}
+/*menu*/
+.webp .header{
+    background-image:url(../img/banner.webp);
+
+}
+.no-webp .header{
+    background-image:url(../img/banner.jpg);
+
+}
+.header{
+    background-size:cover;
+    background-repeat:none;
+    background-position:center center;
+    height:60rem;
+
+}
+.header__texto{
+    margin-top:5rem;
+    text-align:center;
+    color:var(--blanco);
+}
+.barra{
+    padding-top:3rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.logo{
+    color:var(--blanco);
+}
+.logo__nombre{
+    font-weight:400;
+}
+.logo__bold{
+    font-weight:700;
+}
+.navegacion__enlace{
+    font-size:1.8rem;
+    color:var(--blanco);
+    padding:1rem;
+}
+
+/*principal*/
+.contenido-principal{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    column-gap:4rem;
+}
+.entrada{
+    border-bottom:1px solid var(--gris);
+    margin-bottom:2rem;
+}
+.entrada:last-of-type{
+    border:none;
+    margin:0;
+}
+.boton{
+    display:inline-block; /*respeta el width y el margin*/
+    margin-bottom:2rem;
+    padding:1rem 3rem;
+    color:var(--blanco);
+    font-family:var(--fuenteHeading);
+    font-size:1.8rem;
+    text-transform:uppercase;
+    font-weight:700;
+    border:none;
+}
+.boton:hover{
+    cursor:pointer;
+}
+.boton--primario{
+    background-color:var(--negro);
+}
+.boton--secundario{
+    background-color:var(--colorPrimario);
+}
+.cursos{
+    list-style:none;
+}
+.widget-curso{
+    border-bottom:1px solid var(--gris);
+    margin-bottom:2rem;
+}
+.widget-curso:last-of-type{
+    border:none;
+    padding:none;
+}
+.widget-curso__label{
+    font-family:var(--fuenteHeading);
+    font-weight:700;
+}
+.widget-curso__info{
+    font-weight:400;
+}
+.widget-curso__label, .widget-curso__info{
+    font-size:2rem;
+}
+/*Pie de pagina*/
+.footer{
+    margin-top:4rem;
+    padding-bottom:3rem;
+    background-color:var(--negro);
+}
+
+/*sobre nosotros*/
+.sobre-nosotros{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    align-items:center;
+    gap:2rem;
+}
+/*cursos*/
+.curso{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    column-gap:2rem;
+    padding:3rem 0;
+    border-bottom:1px solid var(--gris);
+}
+.curso:last-of-type{
+    padding:0;
+    border:none;
+}
+
+.curso__label{
+    font-family:var(--fuenteHeading);
+    font-weight:700;
+}
+.curso__info{
+    font-weight:400;
+}
+.curso__label, .curso__info{
+    font-size:2rem;
+}
+/*Entrada*/
+.entrada{
+    display:block;
+}
+.entrada__imagen{
+    margin:auto;
+}
+/*contacto*/
+.contacto-background{
+    background-image:url(../img/contacto.jpg);
+    height:40rem;
+    background-repeat:none;
+    background-size:cover;
+}
+.formulario{
+    width:95%;
+    padding:5rem;
+    background-color:var(--blanco);
+    margin:-5rem auto 0 auto;
+}
+.campo{
+    margin-bottom:2rem;
+    display:flex;
+    gap:2rem;
+}
+.campo__label{
+    flex: 0 0 9rem;
+    text-align:right;
+}
+.campo__field{
+    flex:1;
+    border: 1px solid var(--gris);
+}
+.campo__field--textArea{
+    height:20rem;
+}
+/*Responsive*/
+@media (max-width:480px){
+    .barra{
+        display:block;
+    }
+    .navegacion__enlace{
+        display:block;
+        text-align:center;
+    }
+    .contenido-principal{
+        display:block;
+    }
+    .boton{
+        display:block;
+        text-align:center;
+    }
+}
+@media (max-width:768px){
+    .sobre-nosotros{
+        display:block;
+    }
+    .curso{
+        display:block;
+    }
+}
